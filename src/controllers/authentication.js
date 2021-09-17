@@ -1,6 +1,7 @@
 const { userLogin } = require('../services')
 exports.userLogin = async (req, res) => {
     try {
+      console.log("reached here")
       const result = await userLogin(req.body);
       if (result.status) {
         res.send({ uuid: result.uuid, token: result.token });
